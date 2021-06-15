@@ -45,7 +45,7 @@ export interface UndoxState<S, A extends Action> {
  * @template S State object type.
  * 
  */
-export type Comparator<S> = (s1: S, s2: S) => boolean
+export type Comparator<S> = (s1: S, s2: S, action: any) => boolean
 
 
 /**

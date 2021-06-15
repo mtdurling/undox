@@ -137,7 +137,7 @@ const delegate: Delegate = (state, action, reducer, comparator, limit) => {
   const index = state.index
   const isPastLimitExceeded = pastLimitExceeded(index, limit)
 
-  if (comparator(state.present, nextPresent))
+  if (comparator(state.present, nextPresent, action))
     return state
 
   const newHistory = [...getPastActionsWithPresent(state, isPastLimitExceeded), action]
